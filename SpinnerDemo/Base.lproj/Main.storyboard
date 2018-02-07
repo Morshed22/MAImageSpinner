@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpinnerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="GiV-02-GAg" userLabel="Image View1">
+                                <rect key="frame" x="37.5" y="70" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GiV-02-GAg" secondAttribute="height" multiplier="131:131" id="BRT-s7-fcE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wheel" translatesAutoresizingMaskIntoConstraints="NO" id="NVh-5r-qvT" customClass="SpinnerImageView" customModule="SpinnerDemo" customModuleProvider="target">
+                                <rect key="frame" x="52" y="85" width="270.5" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NVh-5r-qvT" secondAttribute="height" multiplier="118:118" id="Rc6-JN-PD2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8K1-oK-e16">
+                                <rect key="frame" x="128" y="160.5" width="120" height="120.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8K1-oK-e16" secondAttribute="height" multiplier="35:35" id="DxT-mx-2Wa"/>
+                                </constraints>
+                                <state key="normal" image="logo"/>
+                                <connections>
+                                    <action selector="Rotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e8n-D3-jH2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicator" translatesAutoresizingMaskIntoConstraints="NO" id="tnV-Un-LL1">
+                                <rect key="frame" x="174.5" y="70" width="26.5" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tnV-Un-LL1" secondAttribute="height" multiplier="23:46" id="Jgf-E1-aiV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tnV-Un-LL1" firstAttribute="top" secondItem="GiV-02-GAg" secondAttribute="top" id="8o3-vV-cHt"/>
+                            <constraint firstItem="GiV-02-GAg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Cj-Zi-4qS"/>
+                            <constraint firstItem="NVh-5r-qvT" firstAttribute="centerX" secondItem="GiV-02-GAg" secondAttribute="centerX" id="A07-YH-ZK2"/>
+                            <constraint firstItem="GiV-02-GAg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="ADz-dp-VxL"/>
+                            <constraint firstItem="NVh-5r-qvT" firstAttribute="width" secondItem="GiV-02-GAg" secondAttribute="width" multiplier="0.9" id="CVe-od-1VL"/>
+                            <constraint firstItem="tnV-Un-LL1" firstAttribute="centerX" secondItem="GiV-02-GAg" secondAttribute="centerX" id="Csf-Uh-ynK"/>
+                            <constraint firstItem="8K1-oK-e16" firstAttribute="centerY" secondItem="GiV-02-GAg" secondAttribute="centerY" id="GGq-At-gUL"/>
+                            <constraint firstItem="8K1-oK-e16" firstAttribute="centerX" secondItem="GiV-02-GAg" secondAttribute="centerX" id="MJM-CL-tLp"/>
+                            <constraint firstItem="NVh-5r-qvT" firstAttribute="centerY" secondItem="GiV-02-GAg" secondAttribute="centerY" id="TGg-Dc-GmM"/>
+                            <constraint firstItem="GiV-02-GAg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="h3o-cW-ub1"/>
+                            <constraint firstItem="8K1-oK-e16" firstAttribute="width" secondItem="GiV-02-GAg" secondAttribute="width" multiplier="0.4" id="hYg-Al-pKQ"/>
+                            <constraint firstItem="tnV-Un-LL1" firstAttribute="width" secondItem="NVh-5r-qvT" secondAttribute="width" multiplier="0.1" id="w1R-iz-hwX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="SpinnerImageView" destination="NVh-5r-qvT" id="lDn-R0-3r2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="border" width="369" height="369"/>
+        <image name="indicator" width="34" height="50"/>
+        <image name="logo" width="105" height="107"/>
+        <image name="wheel" width="330" height="330"/>
+    </resources>
+</document>
